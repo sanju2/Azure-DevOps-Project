@@ -1,14 +1,14 @@
 # Flask install locally
 pip install Flask
 
-# Run Application Locally
+# Run application locally
 python app.py
 
 # Python venv create
 python -m venv venv
 
-# Activate venv
+# Activate python venv
 source venv/bin/activate
 
-# Install Requirements
+# Install requirements.txt
 pip install -r requirements.txt
