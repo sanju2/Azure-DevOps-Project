@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_geek():
-    return '<h1>DevSecOps Project</h2>'
+    return '<h1>Azure DevOps Pipeline for App Service</h2>'
 
 if __name__ == "__main__":
     app.run(debug=True)
