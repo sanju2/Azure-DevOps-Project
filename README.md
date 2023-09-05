@@ -1,36 +1,74 @@
-# personal_blog_website
-Personal Blog Website Hosted on AWS
+# Azure-DevOps-Project
+It's a Flask Application & used Docker for build container image. Create Azure DevOps CI/CD pipeline for Azure  App Service. 
 
-![Diagram](Architectural%20Diagram.jpeg)
+#### Create a build pipeline for Azure Container Registry and release pipeline for Azure App Service.
 
-[Personal Website Link](https://devopswithlasantha.tech).
+![Architectural Diagram](Architectural%20Diagram.jpeg)
 
-[Blog Post Link](https://dev.to/aws-builders/how-i-built-my-personal-blog-site-using-aws-services-51l7).
+### Use following steps.
 
-### Used to follow the steps.
+- Step 1 : Clone this GitHub repository.
 
-- Step 1 : Build my blog site in HTML with CSS.
+![clonerepo](screenshots/1.clonerepo.png)
 
-- Step 2 : Created an S3 bucket to store portfolio files.
+- Step 2 : Create Container registry.
 
-- Step 3 : Create Route53 Hosted zone and add copy NS records. Next, paste the ns record domain provider nameservers section.
+![createacr](screenshots/2.createacr.png)
 
-- Step 4 : Next, go to the S3 bucket and enable Static website hosting, and map the Index document and Error document.
+- Step 3 : Create Azure DevOps New Project.
 
-- Step 5 : Requested a public certificate for your domain in AWS Certificate Manager(ACM).
+![createacr](screenshots/3.createnewproject.png)
 
-- Step 6 : Setup a CloudFront Distribution. Select S3 Static website hosting bucket endpoint and ACM public certificate.
+- Step 4 : Inside Azure DevOps project create 2 service connections for the Azure container registry & GitHub.
 
-- Step 7 : Next, create a Lambda function for the Visitor Count display. Used Python 3.9 runtime.
+![acr-serviceconnection](screenshots/4.acr-serviceconnection.png)
 
-- Step 8 : Created DynamoDB table for Visitor count.
+![github-serviceconnection](screenshots/5.github-serviceconnection.png)
 
-- Step 9 : Created APIGateway REST API and Invoke Lambda function.
+- Step 5 : Create Azure DevOps Build Pipeline.
 
-- Step 10 : Create a git repository and push code.
+![create-pipeline1](screenshots/6.create-pipeline1.png)
 
-- Step 11 : Create GitHub Actions for deploying S3 static website files and Lambda function codes.
+![create-pipeline2](screenshots/7.create-pipeline2.png)
 
-- Step 12 : Finally, Push the latest release to Github.
+![create-pipeline3](screenshots/8.create-pipeline3.png)
+
+- Step 6 : After running the build pipeline you can see your build pipeline is a success & the docker image is updated.
+
+![build-pipeline-success](screenshots/9.build-pipeline-success.png)
+
+![repositorycreated](screenshots/10.repositorycreated.png)
+
+- Step 7 : Enable ECR admin access for deployment to Azure App Service.
+
+![enableadminuseracr](screenshots/11.enableadminuseracr.png)
+
+- Step 8 : Create Azure App Service for deploying docker image.
+
+![createappservice1](screenshots/12.createappservice1.png)
+
+![createappservice2](screenshots/13.createappservice2.png)
+
+- Step 9 : Create a release pipeline in Azure DevOps.
+
+![createreleasepipeline](screenshots/14.createreleasepipeline.png)
+
+![createreleasepipeline1](screenshots/15.createreleasepipeline1.png)
+
+![createreleasepipeline2](screenshots/16.createreleasepipeline2.png)
+
+- Step 10 : Deploy 1st release.
+
+![1strelease](screenshots/17.1strelease.png)
+
+- Step 11 : Add port number in Azure App Service.
+
+![Settings5000](screenshots/18.APPServiceApplicationSettings5000.png)
+
+- Step 12 : Finally, Paste the App Service URL in the web browser. You can see the application running.
+
+![webappup&run](screenshots/19.webappup&run.png)
+
+[Learn More Azure DevOps](https://azuredevopslabs.com).
 
 ### Thank You! :shipit:
