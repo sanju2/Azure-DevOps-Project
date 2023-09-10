@@ -3,7 +3,7 @@ It's a Flask Application & used Docker for build container image. Create Azure D
 
 #### Create a build pipeline for Azure Container Registry and release pipeline for Azure App Service.
 
-![Architectural Diagram](Architectural%20Diagram.jpeg)
+![Architectural Diagram](Architectural%20Diagram2.gif)
 
 ### Use following steps.
 
